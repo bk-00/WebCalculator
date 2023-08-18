@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model WebCalculator.Models.HomeViewModel
+
+<div id="CalView">
+    <div id="rule">
+        <p>Rules: </p>
+        <p>1. Accept operation for Addition, Substraction, Multiplication, Division</p>
+        <p>2. Expression should only contain numbers, decimal point, +, -, *, /, (, )</p>
+        <p>3. Negative and decimal values are allowed to be entered directly, eg. -1+-2.1, 1.5/-2</p>
+        <p>4. Multiplication can be done as eg. 1*-2, 1(-2)</p>
+        <p>5. Enter the expression as eg. 1 + ( 2.5 * 3 - ( 4 / 5.7 ) - 6.01 ) + 7</p>
+    </div>
+
+    <form method="post" asp-action="Index" id="ExpDetails">
+        <label for="Expression">Expression: </label>
+        <input type="text" id="Expression" name="Expression" size="50" placeholder="1+1" />
+        <br /><br />
+        @if (Model.ValidExpression)
+        {
+            <label for="Ans">Result:    @Model.Expression = @Model.Ans</label>
+        }
+        <br /><br />
+        <button type="submit" id="Cal">Calculate</button>
+    </form>
+</div>
+
+@if (Model.ValidExpression == false)
+{
+    <script type="text/javascript">
+        window.onload = function () { alert("@Model.Message"); };
+    </script>
+}

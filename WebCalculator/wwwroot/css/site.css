@@ -1,0 +1,43 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#rule {
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 0.8;
+    padding: 15px;
+    display: inline-block;
+    background-color: bisque;
+}
+
+#ExpDetails {
+    margin-top: 30px;
+}
+
+#Cal {
+    position: relative;
+    left: 20%;
+    right: 20%;
+}
+
+#CalView {
+    position: relative;
+    left: 25%;
+    right: 25%;
+}
