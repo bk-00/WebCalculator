@@ -307,8 +307,8 @@ namespace WebCalculator.Controllers
         private static bool compute(string strExpression, out double dbltmpResult, out string strError)
         {
             strError = string.Empty;
-            List<double> dblNum = new List<double>();
-            List<char> chOperator = new List<char>();
+            List<double>? dblNum = new List<double>();
+            List<char>? chOperator = new List<char>();
             string strtmpNum = string.Empty;
             dbltmpResult = 0;
             bool blnReturn = true;

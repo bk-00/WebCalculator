@@ -5,4 +5,5 @@
 
 $(document).ready(function () {
     $('#Expression').focus();
+    $('.virtualKeyboard').vkb();
 });

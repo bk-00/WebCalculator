@@ -16,14 +16,14 @@
 
     <form method="post" asp-action="Index" id="ExpDetails">
         <label for="Expression">Expression: </label>
-        <input type="text" id="Expression" name="Expression" size="50" placeholder="1+1" />
+        <input type="text" id="Expression" name="Expression" size="70" placeholder="1+1" class="virtualKeyboard" required="required" />
         <br /><br />
         @if (Model.ValidExpression)
         {
             <label for="Ans">Result:    @Model.Expression = @Model.Ans</label>
         }
         <br /><br />
-        <button type="submit" id="Cal">Calculate</button>
+        <input type="submit" id="Cal" value="Calculate"/>
     </form>
 </div>
 

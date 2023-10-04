@@ -15,5 +15,13 @@ namespace WebCalculator.Models
             get { return validExp; }
             set { validExp = value; }
         }
+
+        public HomeViewModel()
+        {
+            Expression = string.Empty;
+            Ans = 0;
+            Message = string.Empty;
+            validExp = true;
+        }
     }
 }
